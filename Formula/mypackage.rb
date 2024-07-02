@@ -4,8 +4,8 @@
 class Mypackage < Formula
   desc "dub finder tool description"
   homepage "colins-blog.pandia.io"
-  url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
-  sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
+  url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-unknown-linux-musl.tar.gz"
+  sha256 "184ecb9517aee0c5df44782cae56489cd8bda7f3a2ed9fb88da2a7f7792eb2d6"
   license "MIT"
 
 
