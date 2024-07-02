@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Mypackage < Formula
+class Dubfinder < Formula
   desc "dub finder tool description"
   homepage "colins-blog.pandia.io"
   url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-unknown-linux-musl.tar.gz"
