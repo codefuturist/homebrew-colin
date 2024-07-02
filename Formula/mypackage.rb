@@ -4,7 +4,7 @@
 class Mypackage < Formula
   desc "dub finder tool description"
   homepage "colins-blog.pandia.io"
-  url "https://$GTOKEN@github.com/codefuturist/monorepo/releases/download/v0.1.2/monorepo_v0.1.2_x86_64-unknown-linux-musl.tar.gz"
+  url -L -O "https://$GTOKEN@github.com/codefuturist/monorepo/releases/download/v0.1.2/monorepo_v0.1.2_x86_64-unknown-linux-musl.tar.gz"
   sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
   license "MIT"
 
