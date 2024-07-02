@@ -12,19 +12,19 @@ class Mypackage < Formula
   
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
-      sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
+      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-unknown-linux-musl.tar.gz"
+      sha256 "184ecb9517aee0c5df44782cae56489cd8bda7f3a2ed9fb88da2a7f7792eb2d6"
     elsif Hardware::CPU.arm?
-      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
-      sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
+      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-unknown-linux-musl.tar.gz"
+      sha256 "184ecb9517aee0c5df44782cae56489cd8bda7f3a2ed9fb88da2a7f7792eb2d6"
     end
   elsif OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
-      sha256 "0b21e8b524a4fe48386f9df03bdc17b0c6edf7868358f5ac9c7c359b419154f8"
+      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
+      sha256 "0f99a27728786c486820d3a84eb05153ed57b7357b3e64f7a45f5b21e12643ae"
     elsif Hardware::CPU.arm?
-      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
-      sha256 "0b21e8b524a4fe48386f9df03bdc17b0c6edf7868358f5ac9c7c359b419154f8"
+      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
+      sha256 "0f99a27728786c486820d3a84eb05153ed57b7357b3e64f7a45f5b21e12643ae"
     end
   end
   
