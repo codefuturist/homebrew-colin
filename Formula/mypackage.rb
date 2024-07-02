@@ -4,10 +4,30 @@
 class Mypackage < Formula
   desc "dub finder tool description"
   homepage "colins-blog.pandia.io"
-  url -L -O "https://$GTOKEN@github.com/codefuturist/monorepo/releases/download/v0.1.2/monorepo_v0.1.2_x86_64-unknown-linux-musl.tar.gz"
+  url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
   sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
   license "MIT"
 
+
+  
+  if OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
+      sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
+      sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
+    end
+  elsif OS.mac?
+    if Hardware::CPU.intel?
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
+      sha256 "0b21e8b524a4fe48386f9df03bdc17b0c6edf7868358f5ac9c7c359b419154f8"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.1/monorepo_v0.1.2_x86_64-pc-windows-gnu.zip"
+      sha256 "0b21e8b524a4fe48386f9df03bdc17b0c6edf7868358f5ac9c7c359b419154f8"
+    end
+  end
+  
   # depends_on "cmake" => :build
 
   def install
@@ -16,25 +36,6 @@ class Mypackage < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "dub-finder"
-
-
-    if OS.mac?
-      if Hardware::CPU.intel?
-        url "https://example.com/example-mac-intel.tar.gz"
-        sha256 "mac-intel-checksumhash"
-      elsif Hardware::CPU.arm?
-        url "https://example.com/example-mac-arm.tar.gz"
-        sha256 "mac-arm-checksumhash"
-      end
-    elsif OS.linux?
-      if Hardware::CPU.intel?
-        url "https://example.com/example-linux-intel.tar.gz"
-        sha256 "linux-intel-checksumhash"
-      elsif Hardware::CPU.arm?
-        url "https://example.com/example-linux-arm.tar.gz"
-        sha256 "linux-arm-checksumhash"
-      end
-    end
     
   end
 
