@@ -4,7 +4,7 @@
 class Mypackage < Formula
   desc "dub finder tool description"
   homepage "colins-blog.pandia.io"
-  url "https://${GTOKEN}@github.com/codefuturist/monorepo/releases/download/v0.1.2/monorepo_v0.1.2_x86_64-unknown-linux-musl.tar.gz"
+  url "https://#{ENV["GTOKEN"]}@github.com/codefuturist/monorepo/releases/download/v0.1.2/monorepo_v0.1.2_x86_64-unknown-linux-musl.tar.gz"
   sha256 "6c68d8021bbf501bb84edf565f2be3b5a7005a1647e223f37153b9c227829204"
   license "MIT"
 
@@ -16,6 +16,26 @@ class Mypackage < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "dub-finder"
+
+
+    if OS.mac?
+      if Hardware::CPU.intel?
+        url "https://example.com/example-mac-intel.tar.gz"
+        sha256 "mac-intel-checksumhash"
+      elsif Hardware::CPU.arm?
+        url "https://example.com/example-mac-arm.tar.gz"
+        sha256 "mac-arm-checksumhash"
+      end
+    elsif OS.linux?
+      if Hardware::CPU.intel?
+        url "https://example.com/example-linux-intel.tar.gz"
+        sha256 "linux-intel-checksumhash"
+      elsif Hardware::CPU.arm?
+        url "https://example.com/example-linux-arm.tar.gz"
+        sha256 "linux-arm-checksumhash"
+      end
+    end
+    
   end
 
   test do
