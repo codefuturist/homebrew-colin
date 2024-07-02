@@ -20,10 +20,10 @@ class Mypackage < Formula
     end
   elsif OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.2/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
       sha256 "0f99a27728786c486820d3a84eb05153ed57b7357b3e64f7a45f5b21e12643ae"
     elsif Hardware::CPU.arm?
-      url "https://github.com/codefuturist/monorepo/releases/download/v0.1.3/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
+      url "https://github.com/codefuturist/monorepo-public/releases/download/v0.0.2/monorepo_v0.1.3_x86_64-pc-windows-gnu.zip"
       sha256 "0f99a27728786c486820d3a84eb05153ed57b7357b3e64f7a45f5b21e12643ae"
     end
   end
