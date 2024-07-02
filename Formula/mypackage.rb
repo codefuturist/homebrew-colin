@@ -35,7 +35,13 @@ class Mypackage < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "dub-finder"
+
+    if OS.linux?
+      bin.install "dub-finder"
+    elsif OS.mac?
+      bin.install "dub-finder.exe"
+    end
+    
     
   end
 
